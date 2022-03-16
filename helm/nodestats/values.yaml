@@ -2,4 +2,4 @@ name: nodestats
 service:
   name: metrics
   port: 9666
-image: daveoy/nodestats
+image: car:5000/davey/nodestats 
