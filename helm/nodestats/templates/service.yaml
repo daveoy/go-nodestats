@@ -10,6 +10,7 @@ spec:
   - port: {{ .Values.service.port }}
     protocol: TCP
     targetPort: {{ .Values.service.port }}
+    name: {{ .Values.service.name }}
   selector:
     app: {{ .Values.name }}
   type: ClusterIP
