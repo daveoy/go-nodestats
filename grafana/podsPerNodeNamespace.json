@@ -1,0 +1,1157 @@
+{
+	"annotations": {
+	  "list": [
+		{
+		  "builtIn": 1,
+		  "datasource": "-- Grafana --",
+		  "enable": true,
+		  "hide": true,
+		  "iconColor": "rgba(0, 211, 255, 1)",
+		  "name": "Annotations & Alerts",
+		  "type": "dashboard"
+		}
+	  ]
+	},
+	"editable": true,
+	"gnetId": null,
+	"graphTooltip": 0,
+	"id": 35,
+	"iteration": 1647448344229,
+	"links": [],
+	"panels": [
+	  {
+		"datasource": null,
+		"gridPos": {
+		  "h": 1,
+		  "w": 24,
+		  "x": 0,
+		  "y": 0
+		},
+		"id": 12,
+		"title": "podsPerNode by Namespace",
+		"type": "row"
+	  },
+	  {
+		"aliasColors": {},
+		"bars": false,
+		"dashLength": 10,
+		"dashes": false,
+		"datasource": null,
+		"fieldConfig": {
+		  "defaults": {
+			"custom": {}
+		  },
+		  "overrides": []
+		},
+		"fill": 0,
+		"fillGradient": 0,
+		"gridPos": {
+		  "h": 12,
+		  "w": 24,
+		  "x": 0,
+		  "y": 1
+		},
+		"hiddenSeries": false,
+		"id": 14,
+		"legend": {
+		  "alignAsTable": true,
+		  "avg": false,
+		  "current": true,
+		  "max": true,
+		  "min": true,
+		  "rightSide": true,
+		  "show": true,
+		  "sort": "max",
+		  "sortDesc": true,
+		  "total": false,
+		  "values": true
+		},
+		"lines": true,
+		"linewidth": 1,
+		"nullPointMode": "connected",
+		"options": {
+		  "alertThreshold": true
+		},
+		"percentage": false,
+		"pluginVersion": "7.4.2",
+		"pointradius": 2,
+		"points": false,
+		"renderer": "flot",
+		"seriesOverrides": [],
+		"spaceLength": 10,
+		"stack": false,
+		"steppedLine": false,
+		"targets": [
+		  {
+			"expr": "sum by (node) (pods_per_node{exported_namespace=\"$exported_namespace\"})",
+			"interval": "",
+			"legendFormat": "",
+			"refId": "A"
+		  }
+		],
+		"thresholds": [],
+		"timeFrom": null,
+		"timeRegions": [],
+		"timeShift": null,
+		"title": "podsPerNode by Namespace",
+		"tooltip": {
+		  "shared": true,
+		  "sort": 0,
+		  "value_type": "individual"
+		},
+		"type": "graph",
+		"xaxis": {
+		  "buckets": null,
+		  "mode": "time",
+		  "name": null,
+		  "show": true,
+		  "values": []
+		},
+		"yaxes": [
+		  {
+			"format": "short",
+			"label": null,
+			"logBase": 1,
+			"max": null,
+			"min": null,
+			"show": true
+		  },
+		  {
+			"format": "short",
+			"label": null,
+			"logBase": 1,
+			"max": null,
+			"min": null,
+			"show": true
+		  }
+		],
+		"yaxis": {
+		  "align": false,
+		  "alignLevel": null
+		}
+	  },
+	  {
+		"aliasColors": {},
+		"bars": false,
+		"dashLength": 10,
+		"dashes": false,
+		"datasource": null,
+		"fieldConfig": {
+		  "defaults": {
+			"custom": {}
+		  },
+		  "overrides": []
+		},
+		"fill": 0,
+		"fillGradient": 0,
+		"gridPos": {
+		  "h": 12,
+		  "w": 24,
+		  "x": 0,
+		  "y": 13
+		},
+		"hiddenSeries": false,
+		"id": 10,
+		"legend": {
+		  "alignAsTable": true,
+		  "avg": false,
+		  "current": true,
+		  "max": true,
+		  "min": true,
+		  "rightSide": true,
+		  "show": true,
+		  "sort": "max",
+		  "sortDesc": true,
+		  "total": false,
+		  "values": true
+		},
+		"lines": true,
+		"linewidth": 1,
+		"nullPointMode": "connected",
+		"options": {
+		  "alertThreshold": true
+		},
+		"percentage": false,
+		"pluginVersion": "7.4.2",
+		"pointradius": 2,
+		"points": false,
+		"renderer": "flot",
+		"repeat": "node",
+		"scopedVars": {
+		  "node": {
+			"selected": true,
+			"text": "monwfsamawrkp01",
+			"value": "monwfsamawrkp01"
+		  }
+		},
+		"seriesOverrides": [],
+		"spaceLength": 10,
+		"stack": false,
+		"steppedLine": false,
+		"targets": [
+		  {
+			"expr": "sum by (exported_namespace) (pods_per_node{node=\"$node\"})",
+			"interval": "",
+			"legendFormat": "",
+			"refId": "A"
+		  }
+		],
+		"thresholds": [],
+		"timeFrom": null,
+		"timeRegions": [],
+		"timeShift": null,
+		"title": "Pods per Namespace",
+		"tooltip": {
+		  "shared": true,
+		  "sort": 0,
+		  "value_type": "individual"
+		},
+		"type": "graph",
+		"xaxis": {
+		  "buckets": null,
+		  "mode": "time",
+		  "name": null,
+		  "show": true,
+		  "values": []
+		},
+		"yaxes": [
+		  {
+			"format": "short",
+			"label": null,
+			"logBase": 1,
+			"max": null,
+			"min": null,
+			"show": true
+		  },
+		  {
+			"format": "short",
+			"label": null,
+			"logBase": 1,
+			"max": null,
+			"min": null,
+			"show": true
+		  }
+		],
+		"yaxis": {
+		  "align": false,
+		  "alignLevel": null
+		}
+	  },
+	  {
+		"collapsed": false,
+		"datasource": null,
+		"gridPos": {
+		  "h": 1,
+		  "w": 24,
+		  "x": 0,
+		  "y": 25
+		},
+		"id": 6,
+		"panels": [],
+		"title": "static",
+		"type": "row"
+	  },
+	  {
+		"aliasColors": {},
+		"bars": false,
+		"dashLength": 10,
+		"dashes": false,
+		"datasource": null,
+		"fieldConfig": {
+		  "defaults": {
+			"color": {},
+			"custom": {},
+			"thresholds": {
+			  "mode": "absolute",
+			  "steps": []
+			}
+		  },
+		  "overrides": []
+		},
+		"fill": 0,
+		"fillGradient": 0,
+		"gridPos": {
+		  "h": 13,
+		  "w": 12,
+		  "x": 0,
+		  "y": 26
+		},
+		"hiddenSeries": false,
+		"id": 2,
+		"legend": {
+		  "alignAsTable": true,
+		  "avg": false,
+		  "current": true,
+		  "max": true,
+		  "min": true,
+		  "rightSide": true,
+		  "show": true,
+		  "sort": "max",
+		  "sortDesc": true,
+		  "total": false,
+		  "values": true
+		},
+		"lines": true,
+		"linewidth": 1,
+		"nullPointMode": "connected",
+		"options": {
+		  "alertThreshold": true
+		},
+		"percentage": false,
+		"pluginVersion": "7.4.2",
+		"pointradius": 2,
+		"points": false,
+		"renderer": "flot",
+		"seriesOverrides": [],
+		"spaceLength": 10,
+		"stack": false,
+		"steppedLine": false,
+		"targets": [
+		  {
+			"expr": "sum by (node) (pods_per_node)",
+			"interval": "",
+			"legendFormat": "",
+			"refId": "A"
+		  }
+		],
+		"thresholds": [],
+		"timeFrom": null,
+		"timeRegions": [],
+		"timeShift": null,
+		"title": "pods per node",
+		"tooltip": {
+		  "shared": true,
+		  "sort": 0,
+		  "value_type": "individual"
+		},
+		"type": "graph",
+		"xaxis": {
+		  "buckets": null,
+		  "mode": "time",
+		  "name": null,
+		  "show": true,
+		  "values": []
+		},
+		"yaxes": [
+		  {
+			"format": "short",
+			"label": null,
+			"logBase": 1,
+			"max": null,
+			"min": null,
+			"show": true
+		  },
+		  {
+			"format": "short",
+			"label": null,
+			"logBase": 1,
+			"max": null,
+			"min": null,
+			"show": true
+		  }
+		],
+		"yaxis": {
+		  "align": false,
+		  "alignLevel": null
+		}
+	  },
+	  {
+		"aliasColors": {},
+		"bars": false,
+		"dashLength": 10,
+		"dashes": false,
+		"datasource": null,
+		"fieldConfig": {
+		  "defaults": {
+			"custom": {}
+		  },
+		  "overrides": []
+		},
+		"fill": 0,
+		"fillGradient": 0,
+		"gridPos": {
+		  "h": 13,
+		  "w": 12,
+		  "x": 12,
+		  "y": 26
+		},
+		"hiddenSeries": false,
+		"id": 4,
+		"legend": {
+		  "alignAsTable": true,
+		  "avg": false,
+		  "current": true,
+		  "max": false,
+		  "min": false,
+		  "rightSide": true,
+		  "show": true,
+		  "total": false,
+		  "values": true
+		},
+		"lines": true,
+		"linewidth": 1,
+		"nullPointMode": "connected",
+		"options": {
+		  "alertThreshold": true
+		},
+		"percentage": false,
+		"pluginVersion": "7.4.2",
+		"pointradius": 2,
+		"points": false,
+		"renderer": "flot",
+		"seriesOverrides": [],
+		"spaceLength": 10,
+		"stack": false,
+		"steppedLine": false,
+		"targets": [
+		  {
+			"expr": "sum by (exported_namespace) (pods_per_node)",
+			"interval": "",
+			"legendFormat": "",
+			"refId": "A"
+		  }
+		],
+		"thresholds": [],
+		"timeFrom": null,
+		"timeRegions": [],
+		"timeShift": null,
+		"title": "pods per namespace",
+		"tooltip": {
+		  "shared": true,
+		  "sort": 0,
+		  "value_type": "individual"
+		},
+		"type": "graph",
+		"xaxis": {
+		  "buckets": null,
+		  "mode": "time",
+		  "name": null,
+		  "show": true,
+		  "values": []
+		},
+		"yaxes": [
+		  {
+			"format": "short",
+			"label": null,
+			"logBase": 1,
+			"max": null,
+			"min": null,
+			"show": true
+		  },
+		  {
+			"format": "short",
+			"label": null,
+			"logBase": 1,
+			"max": null,
+			"min": null,
+			"show": true
+		  }
+		],
+		"yaxis": {
+		  "align": false,
+		  "alignLevel": null
+		}
+	  }
+	],
+	"refresh": "30s",
+	"schemaVersion": 27,
+	"style": "dark",
+	"tags": [],
+	"templating": {
+	  "list": [
+		{
+		  "allValue": null,
+		  "current": {
+			"selected": false,
+			"text": "accessmanagement",
+			"value": "accessmanagement"
+		  },
+		  "datasource": null,
+		  "definition": "label_values(pods_per_node{job=\"nodestats\"}, exported_namespace)",
+		  "description": null,
+		  "error": null,
+		  "hide": 0,
+		  "includeAll": false,
+		  "label": null,
+		  "multi": false,
+		  "name": "exported_namespace",
+		  "options": [
+			{
+			  "selected": false,
+			  "text": "accessmanagement",
+			  "value": "accessmanagement"
+			},
+			{
+			  "selected": false,
+			  "text": "amanda-data-cache",
+			  "value": "amanda-data-cache"
+			},
+			{
+			  "selected": false,
+			  "text": "amanda-data-memcached",
+			  "value": "amanda-data-memcached"
+			},
+			{
+			  "selected": false,
+			  "text": "amanda-frontend",
+			  "value": "amanda-frontend"
+			},
+			{
+			  "selected": false,
+			  "text": "amanda-rabbitmq",
+			  "value": "amanda-rabbitmq"
+			},
+			{
+			  "selected": false,
+			  "text": "amanda-session-cache",
+			  "value": "amanda-session-cache"
+			},
+			{
+			  "selected": false,
+			  "text": "amanda-session-memcached",
+			  "value": "amanda-session-memcached"
+			},
+			{
+			  "selected": true,
+			  "text": "asset",
+			  "value": "asset"
+			},
+			{
+			  "selected": false,
+			  "text": "assetfiltering",
+			  "value": "assetfiltering"
+			},
+			{
+			  "selected": false,
+			  "text": "authentication",
+			  "value": "authentication"
+			},
+			{
+			  "selected": false,
+			  "text": "authorisation",
+			  "value": "authorisation"
+			},
+			{
+			  "selected": false,
+			  "text": "blackbox-exporter",
+			  "value": "blackbox-exporter"
+			},
+			{
+			  "selected": false,
+			  "text": "comments",
+			  "value": "comments"
+			},
+			{
+			  "selected": false,
+			  "text": "context",
+			  "value": "context"
+			},
+			{
+			  "selected": false,
+			  "text": "governor",
+			  "value": "governor"
+			},
+			{
+			  "selected": false,
+			  "text": "host-blackbox-exporter",
+			  "value": "host-blackbox-exporter"
+			},
+			{
+			  "selected": false,
+			  "text": "hostmanager",
+			  "value": "hostmanager"
+			},
+			{
+			  "selected": false,
+			  "text": "houston",
+			  "value": "houston"
+			},
+			{
+			  "selected": false,
+			  "text": "hub",
+			  "value": "hub"
+			},
+			{
+			  "selected": false,
+			  "text": "hubgenericattributes",
+			  "value": "hubgenericattributes"
+			},
+			{
+			  "selected": false,
+			  "text": "humanresource",
+			  "value": "humanresource"
+			},
+			{
+			  "selected": false,
+			  "text": "ingress-nginx",
+			  "value": "ingress-nginx"
+			},
+			{
+			  "selected": false,
+			  "text": "jaeger",
+			  "value": "jaeger"
+			},
+			{
+			  "selected": false,
+			  "text": "jaeger-operator",
+			  "value": "jaeger-operator"
+			},
+			{
+			  "selected": false,
+			  "text": "jobinator",
+			  "value": "jobinator"
+			},
+			{
+			  "selected": false,
+			  "text": "kube-system",
+			  "value": "kube-system"
+			},
+			{
+			  "selected": false,
+			  "text": "loki",
+			  "value": "loki"
+			},
+			{
+			  "selected": false,
+			  "text": "mailinglists",
+			  "value": "mailinglists"
+			},
+			{
+			  "selected": false,
+			  "text": "monitoring",
+			  "value": "monitoring"
+			},
+			{
+			  "selected": false,
+			  "text": "multisitequeue",
+			  "value": "multisitequeue"
+			},
+			{
+			  "selected": false,
+			  "text": "nodestats",
+			  "value": "nodestats"
+			},
+			{
+			  "selected": false,
+			  "text": "notification",
+			  "value": "notification"
+			},
+			{
+			  "selected": false,
+			  "text": "ones",
+			  "value": "ones"
+			},
+			{
+			  "selected": false,
+			  "text": "packaging",
+			  "value": "packaging"
+			},
+			{
+			  "selected": false,
+			  "text": "pandora",
+			  "value": "pandora"
+			},
+			{
+			  "selected": false,
+			  "text": "prodschedulingtools",
+			  "value": "prodschedulingtools"
+			},
+			{
+			  "selected": false,
+			  "text": "producer",
+			  "value": "producer"
+			},
+			{
+			  "selected": false,
+			  "text": "promtail",
+			  "value": "promtail"
+			},
+			{
+			  "selected": false,
+			  "text": "punchout",
+			  "value": "punchout"
+			},
+			{
+			  "selected": false,
+			  "text": "renderfarm",
+			  "value": "renderfarm"
+			},
+			{
+			  "selected": false,
+			  "text": "resources",
+			  "value": "resources"
+			},
+			{
+			  "selected": false,
+			  "text": "resources-static",
+			  "value": "resources-static"
+			},
+			{
+			  "selected": false,
+			  "text": "session",
+			  "value": "session"
+			},
+			{
+			  "selected": false,
+			  "text": "shotgrid",
+			  "value": "shotgrid"
+			},
+			{
+			  "selected": false,
+			  "text": "shotmanager",
+			  "value": "shotmanager"
+			},
+			{
+			  "selected": false,
+			  "text": "sites",
+			  "value": "sites"
+			},
+			{
+			  "selected": false,
+			  "text": "skynet",
+			  "value": "skynet"
+			},
+			{
+			  "selected": false,
+			  "text": "softcat",
+			  "value": "softcat"
+			},
+			{
+			  "selected": false,
+			  "text": "storage",
+			  "value": "storage"
+			},
+			{
+			  "selected": false,
+			  "text": "syncqc",
+			  "value": "syncqc"
+			},
+			{
+			  "selected": false,
+			  "text": "synctags",
+			  "value": "synctags"
+			},
+			{
+			  "selected": false,
+			  "text": "tag",
+			  "value": "tag"
+			},
+			{
+			  "selected": false,
+			  "text": "taskmanager",
+			  "value": "taskmanager"
+			},
+			{
+			  "selected": false,
+			  "text": "transcodeengine",
+			  "value": "transcodeengine"
+			},
+			{
+			  "selected": false,
+			  "text": "uri",
+			  "value": "uri"
+			},
+			{
+			  "selected": false,
+			  "text": "useradmin",
+			  "value": "useradmin"
+			},
+			{
+			  "selected": false,
+			  "text": "xmesh",
+			  "value": "xmesh"
+			}
+		  ],
+		  "query": {
+			"query": "label_values(pods_per_node{job=\"nodestats\"}, exported_namespace)",
+			"refId": "StandardVariableQuery"
+		  },
+		  "refresh": 0,
+		  "regex": "",
+		  "skipUrlSync": false,
+		  "sort": 0,
+		  "tagValuesQuery": "",
+		  "tags": [],
+		  "tagsQuery": "",
+		  "type": "query",
+		  "useTags": false
+		},
+		{
+		  "allValue": null,
+		  "current": {
+			"selected": false,
+			"text": "monwfsamaingp03",
+			"value": "monwfsamaingp03"
+		  },
+		  "datasource": null,
+		  "definition": "label_values(pods_per_node{job=\"nodestats\"}, node)",
+		  "description": null,
+		  "error": null,
+		  "hide": 0,
+		  "includeAll": false,
+		  "label": null,
+		  "multi": false,
+		  "name": "node",
+		  "options": [
+			{
+			  "selected": false,
+			  "text": "monwfsamaingp03",
+			  "value": "monwfsamaingp03"
+			},
+			{
+			  "selected": false,
+			  "text": "monwfsamawrkp07",
+			  "value": "monwfsamawrkp07"
+			},
+			{
+			  "selected": false,
+			  "text": "monwfsamawrkp12",
+			  "value": "monwfsamawrkp12"
+			},
+			{
+			  "selected": false,
+			  "text": "monwfsamawrkp14",
+			  "value": "monwfsamawrkp14"
+			},
+			{
+			  "selected": false,
+			  "text": "monwfsamawrkp17",
+			  "value": "monwfsamawrkp17"
+			},
+			{
+			  "selected": false,
+			  "text": "monwfsamawrkp37",
+			  "value": "monwfsamawrkp37"
+			},
+			{
+			  "selected": false,
+			  "text": "monwfsamawrkp40",
+			  "value": "monwfsamawrkp40"
+			},
+			{
+			  "selected": false,
+			  "text": "monwfsamawrkp44",
+			  "value": "monwfsamawrkp44"
+			},
+			{
+			  "selected": false,
+			  "text": "monwfsamawrkp10",
+			  "value": "monwfsamawrkp10"
+			},
+			{
+			  "selected": false,
+			  "text": "monwfsamawrkp19",
+			  "value": "monwfsamawrkp19"
+			},
+			{
+			  "selected": false,
+			  "text": "monwfsamawrkp59",
+			  "value": "monwfsamawrkp59"
+			},
+			{
+			  "selected": false,
+			  "text": "monwfsamawrkp26",
+			  "value": "monwfsamawrkp26"
+			},
+			{
+			  "selected": false,
+			  "text": "monwfsamawrkp29",
+			  "value": "monwfsamawrkp29"
+			},
+			{
+			  "selected": false,
+			  "text": "monwfsamawrkp38",
+			  "value": "monwfsamawrkp38"
+			},
+			{
+			  "selected": false,
+			  "text": "monwfsamawrkp43",
+			  "value": "monwfsamawrkp43"
+			},
+			{
+			  "selected": false,
+			  "text": "monwfsamawrkp57",
+			  "value": "monwfsamawrkp57"
+			},
+			{
+			  "selected": false,
+			  "text": "monwfsamawrkp09",
+			  "value": "monwfsamawrkp09"
+			},
+			{
+			  "selected": false,
+			  "text": "monwfsamawrkp24",
+			  "value": "monwfsamawrkp24"
+			},
+			{
+			  "selected": false,
+			  "text": "monwfsamawrkp27",
+			  "value": "monwfsamawrkp27"
+			},
+			{
+			  "selected": false,
+			  "text": "monwfsamawrkp28",
+			  "value": "monwfsamawrkp28"
+			},
+			{
+			  "selected": false,
+			  "text": "monwfsamawrkp32",
+			  "value": "monwfsamawrkp32"
+			},
+			{
+			  "selected": false,
+			  "text": "monwfsamawrkp33",
+			  "value": "monwfsamawrkp33"
+			},
+			{
+			  "selected": false,
+			  "text": "monwfsamawrkp50",
+			  "value": "monwfsamawrkp50"
+			},
+			{
+			  "selected": false,
+			  "text": "monwfsamawrkp63",
+			  "value": "monwfsamawrkp63"
+			},
+			{
+			  "selected": false,
+			  "text": "monwfsamawrkp13",
+			  "value": "monwfsamawrkp13"
+			},
+			{
+			  "selected": false,
+			  "text": "monwfsamawrkp20",
+			  "value": "monwfsamawrkp20"
+			},
+			{
+			  "selected": false,
+			  "text": "monwfsamawrkp21",
+			  "value": "monwfsamawrkp21"
+			},
+			{
+			  "selected": false,
+			  "text": "monwfsamawrkp22",
+			  "value": "monwfsamawrkp22"
+			},
+			{
+			  "selected": false,
+			  "text": "monwfsamawrkp23",
+			  "value": "monwfsamawrkp23"
+			},
+			{
+			  "selected": false,
+			  "text": "monwfsamawrkp08",
+			  "value": "monwfsamawrkp08"
+			},
+			{
+			  "selected": false,
+			  "text": "monwfsamawrkp39",
+			  "value": "monwfsamawrkp39"
+			},
+			{
+			  "selected": false,
+			  "text": "monwfsamaingp01",
+			  "value": "monwfsamaingp01"
+			},
+			{
+			  "selected": true,
+			  "text": "monwfsamawrkp01",
+			  "value": "monwfsamawrkp01"
+			},
+			{
+			  "selected": false,
+			  "text": "monwfsamawrkp05",
+			  "value": "monwfsamawrkp05"
+			},
+			{
+			  "selected": false,
+			  "text": "monwfsamawrkp11",
+			  "value": "monwfsamawrkp11"
+			},
+			{
+			  "selected": false,
+			  "text": "monwfsamawrkp15",
+			  "value": "monwfsamawrkp15"
+			},
+			{
+			  "selected": false,
+			  "text": "monwfsamawrkp16",
+			  "value": "monwfsamawrkp16"
+			},
+			{
+			  "selected": false,
+			  "text": "monwfsamawrkp18",
+			  "value": "monwfsamawrkp18"
+			},
+			{
+			  "selected": false,
+			  "text": "monwfsamawrkp25",
+			  "value": "monwfsamawrkp25"
+			},
+			{
+			  "selected": false,
+			  "text": "monwfsamawrkp30",
+			  "value": "monwfsamawrkp30"
+			},
+			{
+			  "selected": false,
+			  "text": "monwfsamawrkp31",
+			  "value": "monwfsamawrkp31"
+			},
+			{
+			  "selected": false,
+			  "text": "monwfsamawrkp34",
+			  "value": "monwfsamawrkp34"
+			},
+			{
+			  "selected": false,
+			  "text": "monwfsamawrkp35",
+			  "value": "monwfsamawrkp35"
+			},
+			{
+			  "selected": false,
+			  "text": "monwfsamawrkp36",
+			  "value": "monwfsamawrkp36"
+			},
+			{
+			  "selected": false,
+			  "text": "monwfsamawrkp41",
+			  "value": "monwfsamawrkp41"
+			},
+			{
+			  "selected": false,
+			  "text": "monwfsamawrkp42",
+			  "value": "monwfsamawrkp42"
+			},
+			{
+			  "selected": false,
+			  "text": "monwfsamawrkp45",
+			  "value": "monwfsamawrkp45"
+			},
+			{
+			  "selected": false,
+			  "text": "monwfsamawrkp46",
+			  "value": "monwfsamawrkp46"
+			},
+			{
+			  "selected": false,
+			  "text": "monwfsamawrkp47",
+			  "value": "monwfsamawrkp47"
+			},
+			{
+			  "selected": false,
+			  "text": "monwfsamawrkp49",
+			  "value": "monwfsamawrkp49"
+			},
+			{
+			  "selected": false,
+			  "text": "monwfsamawrkp51",
+			  "value": "monwfsamawrkp51"
+			},
+			{
+			  "selected": false,
+			  "text": "monwfsamawrkp56",
+			  "value": "monwfsamawrkp56"
+			},
+			{
+			  "selected": false,
+			  "text": "monwfsamawrkp58",
+			  "value": "monwfsamawrkp58"
+			},
+			{
+			  "selected": false,
+			  "text": "monwfsamawrkp60",
+			  "value": "monwfsamawrkp60"
+			},
+			{
+			  "selected": false,
+			  "text": "monwfsamawrkp62",
+			  "value": "monwfsamawrkp62"
+			},
+			{
+			  "selected": false,
+			  "text": "monwfsamawrkp53",
+			  "value": "monwfsamawrkp53"
+			},
+			{
+			  "selected": false,
+			  "text": "monwfsamawrkp54",
+			  "value": "monwfsamawrkp54"
+			},
+			{
+			  "selected": false,
+			  "text": "monwfsamaingp02",
+			  "value": "monwfsamaingp02"
+			},
+			{
+			  "selected": false,
+			  "text": "monwfsamawrkp55",
+			  "value": "monwfsamawrkp55"
+			},
+			{
+			  "selected": false,
+			  "text": "monwfsamawrkp48",
+			  "value": "monwfsamawrkp48"
+			},
+			{
+			  "selected": false,
+			  "text": "monwfsamawrkp52",
+			  "value": "monwfsamawrkp52"
+			},
+			{
+			  "selected": false,
+			  "text": "monwfsamawrkp61",
+			  "value": "monwfsamawrkp61"
+			},
+			{
+			  "selected": false,
+			  "text": "monwfsamamstp01",
+			  "value": "monwfsamamstp01"
+			},
+			{
+			  "selected": false,
+			  "text": "monwfsamawrkp02",
+			  "value": "monwfsamawrkp02"
+			},
+			{
+			  "selected": false,
+			  "text": "monwfsamawrkp03",
+			  "value": "monwfsamawrkp03"
+			},
+			{
+			  "selected": false,
+			  "text": "monwfsamawrkp04",
+			  "value": "monwfsamawrkp04"
+			},
+			{
+			  "selected": false,
+			  "text": "monwfsamawrkp06",
+			  "value": "monwfsamawrkp06"
+			}
+		  ],
+		  "query": {
+			"query": "label_values(pods_per_node{job=\"nodestats\"}, node)",
+			"refId": "StandardVariableQuery"
+		  },
+		  "refresh": 0,
+		  "regex": "",
+		  "skipUrlSync": false,
+		  "sort": 0,
+		  "tagValuesQuery": "",
+		  "tags": [],
+		  "tagsQuery": "",
+		  "type": "query",
+		  "useTags": false
+		}
+	  ]
+	},
+	"time": {
+	  "from": "now-1h",
+	  "to": "now"
+	},
+	"timepicker": {},
+	"timezone": "",
+	"title": "podsPerNodeNamespace",
+	"uid": "MQ6KFcEnz",
+	"version": 14
+  }
